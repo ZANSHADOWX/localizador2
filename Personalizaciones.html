@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda tu Cita de Corte de Cabello</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('baner baber.jpg'); /* Corrección en la ruta */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #000000;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+            border-radius: 10px;
+        }
+        h1 {
+            text-align: center;
+            color: rgba(207, 177, 8, 0.829);
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-bottom: 5px;
+            color: gold;
+        }
+        input, select, textarea {
+            margin-bottom: 15px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px;
+            background-color: #5cb85c;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: rgba(207, 177, 8, 0.829);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Agenda tu Cita de Corte de Cabello</h1>
+        <form action="insertar_cita.php" method="post">
+            <label for="name">Nombre Completo:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="phone">Número de Teléfono:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="stylist">Selecciona un Estilista:</label>
+            <select id="stylist" name="stylist" required>
+                <!-- Las opciones se pueden llenar dinámicamente desde PHP -->
+                <option value="1">Estilista 1</option>
+                <option value="2">Estilista 2</option>
+                <option value="3">Estilista 3</option>
+                <option value="4">Estilista 4</option>
+                <option value="5">Estilista 5</option>
+            </select>
+
+            <label for="package">Selecciona un Paquete:</label>
+            <select id="package" name="package" required>
+                <!-- Las opciones se pueden llenar dinámicamente desde PHP -->
+                <option value="1">Básico</option>
+                <option value="2">Premium</option>
+                <option value="3">Deluxe</option>
+            </select>
+
+            <label for="tipo_corte">Selecciona un Tipo de Corte:</label>
+            <select id="tipo_corte" name="tipo_corte">
+                <option value="">Ninguno</option>
+                <!-- Agrega los valores correspondientes -->
+                <option value="1">Clásico</option>
+                <option value="2">Moderno</option>
+                <option value="3">Degradado</option>
+            </select>
+
+            <label for="corte">Selecciona un Corte:</label>
+            <select id="corte" name="corte">
+                <option value="">Ninguno</option>
+                <!-- Agrega los valores correspondientes -->
+                <option value="1">Corte 1</option>
+                <option value="2">Corte 2</option>
+                <option value="3">Corte 3</option>
+                <option value="4">Corte 4</option>
+            </select>
+
+            <label for="date">Fecha de la Cita:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="time">Hora de la Cita:</label>
+            <input type="time" id="time" name="time" required>
+
+            <label for="notes">Personalizaciones de la cita:</label>
+            <textarea id="notes" name="notes" rows="4" placeholder="¿Tienes alguna preferencia o requerimiento especial?"></textarea>
+
+            <button type="submit">Agendar Cita</button>
+        </form>
+    </div>
+</body>
+</html>

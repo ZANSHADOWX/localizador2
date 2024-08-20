@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbería El Estilo</title>
+    <style>
+        body {
+            background-image: url('IMG/integradora.jpg'); 
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed; 
+        }
+        .container {
+            width: 95%;
+            margin: 0 auto;
+            padding: 30px;
+            background-color: black; 
+            box-shadow: 30px 7px 30px rgba(36, 224, 19, 0.1); 
+            border-radius: 29px;
+            margin-top: 10px;
+        }
+        .header {
+            text-align: center;
+            font-size: 60px;
+            font-family: 'Edwardian Script ITC', cursive; 
+            padding: 50px;
+            background-image: url('IMG/portadadorado.jpg'); 
+            color: black; 
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            position: relative; 
+        }
+        .header__nav-icon {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 60px; 
+            height: 60px; 
+            background: linear-gradient(135deg, #8eb5c1, #3e3c3b); 
+            border-radius: 50%;
+            border: 3px solid #000; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer; 
+        }
+        .content {
+            padding: 30px;
+        }
+        .button {
+            display: inline-block;
+            background-color: white;
+            color: black;
+            padding: 20px 30px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 20px;
+            margin-right: 45px;
+            margin-bottom: 20px;
+            cursor: pointer; 
+        }
+        .button:hover {
+            background-color: rgba(207, 177, 8, 0.829);
+        }
+        .header-icon{
+            left: 20px;
+            top: 20px;
+            right: 20px;
+            width: 60px; 
+            height: 60px; 
+            position: absolute;
+            color: #BEBEBE;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Diamantium Barber Studio</h1>
+            <h2>Expertos en cortes de cabello y barbas</h2>
+            <a href="premium.html" class="header-icon">Premium</a>
+            <a href="login.html" class="header__nav-icon">
+                <svg aria-hidden="true" fill="none" focusable="false" width="30" height="40" viewBox="0 0 30 40">
+                    <path d="M16.125 8.75c-.184 2.478-2.063 4.5-4.125 4.5s-3.944-2.021-4.125-4.5c-.187-2.578 1.64-4.5 4.125-4.5 2.484 0 4.313 1.969 4.125 4.5Z" stroke="currentColor" stroke-width="1.5"></path>
+                    <path d="M3.017 20.747C3.783 16.5 7.922 14.25 12 14.25s8.217 2.25 8.984 6.497" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="15"></path>
+                </svg>
+            </a>
+        </header>
+        <main class="content">
+            <a href="CATALOGO.html" class="button">Catálogo de cortes</a>
+            <a href="Paquetes.html" class="button">Citas por paquete</a>
+            <a href="Personalizaciones.html" class="button">Citas personalizadas</a>
+        </main>
+    </div>
+</body>
+</html>

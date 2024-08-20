@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f4e3; /* Blanco Marfil */
+            color: #2c2c2c; /* Gris Carbón */
+        }
+
+        header {
+            background-color: #0e0e0e; /* Negro Ébano */
+            color: #f8f4e3; /* Blanco Marfil */
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #0e0e0e; /* Negro Ébano */
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            color: #B08D57;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #B08D57; 
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group input[type="number"],
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .form-group input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        .form-group .plan {
+            margin-bottom: 10px;
+        }
+
+        .submit-button {
+            background-color: #b08d57; /* Bronce Satinado */
+            color: #f8f4e3; /* Blanco Marfil */
+            padding: 15px 20px;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .submit-button:hover {
+            background-color: #9c7e4c; /* Un tono más oscuro de Bronce Satinado */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Diamantium Baber Studio</h1>
+        <p>Nuestra zona mas exclusiva</p>
+    </header>
+
+    <div class="container">
+        <form action="/procesar-pago" method="POST">
+            <div class="form-group">
+                <label for="name">Nombre Completo</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Correo Electrónico</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="plan">Selecciona un Plan</label>
+                <div class="plan">
+                    <input type="radio" id="plan-basico" name="plan" value="basico" required>
+                    <label for="plan-basico">Básico - $10/mes</label>
+                </div>
+                <div class="plan">
+                    <input type="radio" id="plan-premium" name="plan" value="premium" required>
+                    <label for="plan-premium">Premium - $25/mes</label>
+                </div>
+                <div class="plan">
+                    <input type="radio" id="plan-vip" name="plan" value="vip" required>
+                    <label for="plan-vip">VIP - $50/mes</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="card-number">Número de Tarjeta</label>
+                <input type="text" id="card-number" name="card-number" required>
+            </div>
+
+            <div class="form-group">
+                <label for="expiration">Fecha de Expiración (MM/AA)</label>
+                <input type="text" id="expiration" name="expiration" required>
+            </div>
+
+            <div class="form-group">
+                <label for="cvv">CVV</label>
+                <input type="number" id="cvv" name="cvv" required>
+            </div>
+
+            <button type="submit" class="submit-button">Pagar Ahora</button>
+        </form>
+    </div>
+
+</body>
+</html>

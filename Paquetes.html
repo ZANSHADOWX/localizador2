@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Citas para Corte de Cabello por Paquete</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            background-image: url(baner\ baber.jpg);
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+        }
+        h1 {
+            text-align: center;
+            color: #e2cd10d8;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-bottom: 5px;
+            color: rgb(197, 184, 0);
+        }
+        input, select {
+            margin-bottom: 15px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px;
+            background-color: #5cb85c;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #4cae4c;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Agenda tu Cita de Corte de Cabello</h1>
+        <form action="insertar_cita.php" method="post">
+            <label for="name">Nombre Completo:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="phone">Número de Teléfono:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="stylist">Selecciona un Estilista:</label>
+            <select id="stylist" name="stylist" required>
+                <option value="1">Estilista 1</option>
+                <option value="2">Estilista 2</option>
+                <option value="3">Estilista 3</option>
+                <option value="4">Estilista 4</option>
+                <option value="5">Estilista 5</option>
+            </select>
+
+            <label for="package">Selecciona un Paquete:</label>
+            <select id="package" name="package" required>
+                <option value="1">Básico - Corte Simple</option>
+                <option value="2">Premium - Corte y Lavado</option>
+                <option value="3">Deluxe - Corte, Lavado y Tratamiento</option>
+            </select>
+
+            <label for="tipo_corte">Selecciona un tipo de corte:</label>
+            <select id="tipo_corte" name="tipo_corte" required>
+                <option value="1">Clásico</option>
+                <option value="2">Moderno</option>
+                <option value="3">Degradado</option>
+            </select>
+
+            <label for="corte">Selecciona un corte:</label>
+            <select id="corte" name="corte" required>
+                <option value="1">Corte 1</option>
+                <option value="2">Corte 2</option>
+                <option value="3">Corte 3</option>
+                <option value="4">Corte 4</option>
+            </select>
+
+            <label for="date">Fecha de la Cita:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="time">Hora de la Cita:</label>
+            <input type="time" id="time" name="time" required>
+
+            <button type="submit">Agendar Cita</button>
+        </form>
+    </div>
+</body>
+</html>
